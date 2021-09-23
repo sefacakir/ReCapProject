@@ -15,7 +15,7 @@ namespace Console
 
             foreach (var car in cars)
             {
-                System.Console.WriteLine(car.Description);
+                System.Console.WriteLine(car.ColorId);
             }
         }
     }
