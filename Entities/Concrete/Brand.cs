@@ -7,14 +7,7 @@ namespace Entities.Concrete
 {
     public class Brand : IEntity
     {
-        public int Id()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Name()
-        {
-            throw new NotImplementedException();
-        }
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

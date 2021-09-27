@@ -2,16 +2,20 @@
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace DataAccess.Abstract
 {
     public interface IEntityRepository<T> where T:class,IEntity, new()
     {
-        int GetById(Car car);
-        List<Car> GetAll();
-        void Add(Car car);
-        void Delete(Car car);
-        void Update(Car car);
+        int GetById(T entity);
+        List<T> GetAll(Expression<Func<T,bool>> filter = null); //filter = null, filtre vermeyebilirsin.
+        void Add(T entity);
+        void Delete(T entity);
+        void Update(T entity);
     }
+
 }
+    //öncelikle veritabanındaki tablolarla entity'lerimi ilişkilendirmem gerekiyor.
+
